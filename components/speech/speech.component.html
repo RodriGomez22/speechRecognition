@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+  <html>
+    <head>
+      <link rel="stylesheet" src="speech.component.css">
+    </head>
+    <body>
+      <div>
+        <img class="imagen1" src="https://www.comunidad.madrid/hospital/ramonycajal/sites/ramonycajal/files/2019-07/Logotipo%20oficial%20-2016-.jpg">
+        <img class="imagen2" src="https://www.mayab.com/wp-content/uploads/2017/06/LOGO-POLITECNICA0.png">
+      </div>
+      <div class="container text-center mt-5">
+        <div class="card text-white bg-dark mb-3">
+          <div><h1>EVA CON RECONOCIMIENTO DE VOZ</h1></div>
+          <div class="card-body">
+            <p class="explicacion">En esta aplicación web realizará el cuestionario EVA mediante el reconocimiento de voz.
+                Para ello, presione el botón de iniciar, y acto seguido indique su nivel de dolor (no dolor - leve - moderado
+                 - severo - insoportable).
+            </p>
+            <div><img src="https://www.tratamientosdeldolor.org/assets/imgs/fondo/escalaDolor.jpg"></div>
+            <button [disabled]="!speech.error" class="btn btn-danger m-2" (click)="startService()">Iniciar</button>
+            <div class="card bg-light mt-2"><p class="text-uppercase text-danger mt-3">{{speech.text}}</p></div>
+          </div>
+        </div>
+      </div>
+    </body>
+</html>
